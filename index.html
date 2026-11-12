@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You Are The Best Mother ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg,#ffdde8,#fff0f5,#f9d5e5);
+  color: #71364f;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(35px, 8vw, 60px);
+  color: #c2185b;
+  text-shadow: 0 0 20px white;
+  animation: glow 2s infinite alternate;
+}
+
+h2 {
+  color: #ad1457;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+button {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 14px 27px;
+  border-radius: 30px;
+  font-size: 17px;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #d6338460;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ad1457;
+}
+
+.card {
+  background: #ffffffb9;
+  padding: 35px 25px;
+  border-radius: 25px;
+  max-width: 750px;
+  box-shadow: 0 10px 40px #b94d7730;
+  border: 2px solid white;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px white; }
+  to { text-shadow: 0 0 30px #ff69b4; }
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 23px;
+  animation: float 7s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.magic {
+  font-size: 55px;
+  animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+  to { transform: scale(1.3) rotate(15deg); }
+}
+
+#surprise {
+  font-size: 23px;
+  margin-top: 20px;
+  color: #c2185b;
+}
+
+.lyrics {
+  background: #fff0f5;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 25px;
+  max-width: 600px;
+  line-height: 2;
+}
+
+footer {
+  padding: 25px;
+  background: #c2185b;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FIRST PAGE -->
+<section>
+  <div class="magic">💖🌸✨</div>
+  <h1>YOU ARE THE<br>BEST MOTHER</h1>
+  <p style="margin-top:25px">
+    To the queen of my heart, my first love and my forever blessing.
+  </p>
+  <button onclick="document.getElementById('love').scrollIntoView({behavior:'smooth'})">
+    Open My Heart ❤️
+  </button>
+</section>
+
+<!-- LOVE MESSAGE -->
+<section id="love">
+  <div class="card">
+    <h2>Dear Mom, 💗</h2>
+    <p>
+      You are the most beautiful blessing in my life.
+      Your love is my strength, your smile is my happiness,
+      and your prayers are my biggest protection.
+      No words can ever explain how much you mean to me.
+      Thank you for every little sacrifice, every hug,
+      every smile and every moment you have given me.
+      I may not say it every day, but I love you more
+      than words could ever express.
+      You are not just my mother, you are my whole world.
+      I am forever lucky to be your child. ❤️
+    </p>
+    <h2 style="margin-top:25px">I LOVE YOU, MAA! 🥹</h2>
+  </div>
+</section>
+
+<!-- MAGICAL TIME -->
+<section>
+  <div class="card">
+    <div class="magic">🪄✨🌷</div>
+    <h2>Magical Time For Mom</h2>
+    <p>
+      Close your eyes for a moment and make a wish.
+      You deserve all the happiness in this universe!
+    </p>
+    <button onclick="magicWish()">Make A Wish ✨</button>
+    <div id="surprise"></div>
+  </div>
+</section>
+
+<!-- FUN TIME -->
+<section>
+  <div class="card">
+    <h2>🎀 A Little Fun Time 🎀</h2>
+    <p>Who is the sweetest person in the whole world?</p>
+    <button onclick="funAnswer()">Show Answer 💕</button>
+    <div id="fun" style="font-size:24px;margin-top:20px"></div>
+    <p style="margin-top:20px">
+      Hint: She is reading this beautiful surprise! 😍
+    </p>
+  </div>
+</section>
+
+<!-- SONG SECTION -->
+<section>
+  <div class="card">
+    <h2>🎵 A Little Song For My Maa 🎵</h2>
+    <p>Made with love, just for you. ❤️</p>
+
+    <div class="lyrics">
+      🌸 Maa, tu meri roshni,<br>
+      Tu hi meri zindagi.<br>
+      Teri hansi se din mera,<br>
+      Tere bina sab adhoora.<br><br>
+
+      ❤️ Teri dua meri taaqat hai,<br>
+      Tera pyaar meri jannat hai.<br>
+      Har pal bas itna kahun,<br>
+      Maa, main tujhse pyaar karun.
+    </div>
+
+    <button onclick="playSong()">▶ Play My Maa Song</button>
+    <button onclick="stopSong()">⏹ Stop Song</button>
+    <p id="songStatus" style="font-size:14px"></p>
+  </div>
+</section>
+
+<footer>
+  Made With Endless Love ❤️<br>
+  For The Best Mother In The Universe 🌍
+</footer>
+
+<script>
+// Floating hearts
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = ["❤️","💕","🌸","✨"][Math.floor(Math.random()*4)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.animationDuration = (4+Math.random()*5)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),9000);
+}
+setInterval(createHeart,500);
+
+// Magical wish
+function magicWish() {
+  document.getElementById("surprise").innerHTML =
+  "✨ Your wish is a thousand smiles, endless happiness and a lifetime of love! 💖🌷";
+}
+
+// Fun time
+function funAnswer() {
+  document.getElementById("fun").innerHTML =
+  "👑 YOU, MOM! You are the cutest queen! 💗😂";
+}
+
+// Original melody with browser music
+let audioContext;
+let timer;
+let noteIndex = 0;
+
+const notes = [261.63,293.66,329.63,392,329.63,293.66,
+               261.63,329.63,392,440,392,329.63];
+
+function playSong() {
+  stopSong();
+  audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  noteIndex = 0;
+  document.getElementById("songStatus").innerText =
+  "🎶 Playing a little melody for Maa...";
+
+  function nextNote() {
+    if (!audioContext || audioContext.state === "closed") return;
+
+    let oscillator = audioContext.createOscillator();
+    let gain = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.value = notes[noteIndex % notes.length];
+
+    gain.gain.setValueAtTime(0.08,audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(
+      0.001,audioContext.currentTime+0.65
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime+0.7);
+
+    noteIndex++;
+  }
+
+  nextNote();
+  timer = setInterval(nextNote,750);
+}
+
+function stopSong() {
+  clearInterval(timer);
+  if(audioContext && audioContext.state !== "closed") {
+    audioContext.close();
+  }
+  audioContext = null;
+  document.getElementById("songStatus").innerText = "Song stopped ❤️";
+}
+</script>
+
+</body>
+  </html>
+  
